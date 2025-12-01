@@ -73,7 +73,7 @@ export const PitchPage: React.FC = () => {
     saveSubstitutes(subs);
   }, [subs]);
 
-  const onDrag = (id: string, event: any, info: any) => {
+  const onDrag = (id: string, _event: any, info: any) => {
     if (!canEdit || !pitchRef.current) return;
     const rect = pitchRef.current.getBoundingClientRect();
     // Mouse/touch pozisyonunu al
@@ -92,7 +92,7 @@ export const PitchPage: React.FC = () => {
     setPlayers((prev) => prev.map((p) => (p.id === id ? { ...p, x, y } : p)));
   };
 
-  const onDragEnd = (id: string, event: any, info: any) => {
+  const onDragEnd = (id: string, _event: any, info: any) => {
     if (!canEdit || !pitchRef.current) return;
     const rect = pitchRef.current.getBoundingClientRect();
     // Mouse/touch pozisyonunu al
@@ -168,7 +168,7 @@ export const PitchPage: React.FC = () => {
     setSubs((prev) => prev.filter((s) => s.id !== sub.id));
   };
 
-  const onSubDragEnd = (sub: Substitute, event: any, info: any) => {
+  const onSubDragEnd = (sub: Substitute, _event: any, info: any) => {
     if (!canEdit || !pitchRef.current) return;
     const rect = pitchRef.current.getBoundingClientRect();
     const clientX = info.point.x;
@@ -353,5 +353,6 @@ export const PitchPage: React.FC = () => {
     </div>
   );
 };
+
 
 
