@@ -6,7 +6,7 @@ import { PitchPage } from "./pages/PitchPage";
 
 export const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/atlanfk">
       <AuthProvider>
         <Layout>
           <Routes>
